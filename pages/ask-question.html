@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask a Question | Ask Without Fear</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Website Header -->
+    <header class="site-header">
+
+        <a href="../home.html">
+            <img src="../images/awf-logo.png" alt="Ask Without Fear logo">
+        </a>
+
+        <nav class="main-nav">
+            <a href="../home.html">Home</a>
+            <a href="questions.html">Questions &amp; Answers</a>
+            <a href="daily-word.html">Daily Word</a>
+            <a href="ask-question.html" class="active">Ask a Question</a>
+            <a href="community.html">Community</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- Page Introduction -->
+        <section class="page-intro">
+            <h1>Ask a Question</h1>
+            <p>
+                Nothing is too small, too awkward or too personal.
+                You do not need to give your name.
+            </p>
+        </section>
+
+
+        <!-- The Form -->
+        <section class="ask-section">
+
+            <form class="ask-form" id="ask-form"
+                  action="https://api.web3forms.com/submit" method="POST">
+
+                <!-- Hidden settings for the form service -->
+                <input type="hidden" name="access_key" value="2558dcfa-369f-497b-81a1-b048f9293f24">
+                <input type="hidden" name="subject" value="New question - Ask Without Fear">
+                <input type="hidden" name="from_name" value="Ask Without Fear website">
+
+                <!-- Spam trap: real people never see or tick this -->
+                <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off">
+
+                <div class="form-group">
+                    <label for="topic">Topic</label>
+                    <select id="topic" name="topic" required>
+                        <option value="">Choose a topic...</option>
+                        <option value="Faith">Faith</option>
+                        <option value="Relationships">Relationships</option>
+                        <option value="Marriage">Marriage</option>
+                        <option value="Purity">Purity</option>
+                        <option value="Prayer">Prayer</option>
+                        <option value="Purpose">Purpose</option>
+                        <option value="Something else">Something else</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="question">Your question</label>
+                    <textarea id="question" name="question" rows="6" maxlength="1000"
+                              required
+                              placeholder="Type the question you have been afraid to ask..."></textarea>
+                   <p class="form-hint" id="char-count">0 / 1000</p> 
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Want a personal reply? (optional)</label>
+                    <input type="email" id="email" name="email" autocomplete="off"
+                           placeholder="Leave this empty to stay fully anonymous">
+                    <p class="form-hint">
+                        Only fill this in if you want someone to reply to you privately.
+                    </p>
+                </div>
+
+                <div class="form-group consent">
+                    <label class="check">
+                        <input type="checkbox" id="consent" name="consent" value="Yes" required>
+                        <span>
+                            I understand my question will be sent by email to the
+                            Revival Hub team, and that a form service delivers it.
+                        </span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary form-submit">Send My Question</button>
+
+                <div id="form-message" class="form-message" role="status" hidden></div>
+
+            </form>
+
+            <!-- Safety notice -->
+            <aside class="safety-note">
+                <h2>If you need help right now</h2>
+                <p>
+                    This form is read by people, not monitored in real time.
+                    If you are in danger, being hurt, or thinking of harming
+                    yourself, please contact your local emergency number or
+                    speak to a trusted adult today. Do not wait for a reply here.
+                </p>
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <p>Ask Without Fear</p>
+
+        <p>
+            Questions you may be afraid to ask.
+            Answers rooted in Scripture.
+        </p>
+
+        <p>Powered by Revival Hub</p>
+
+        <p>&copy; 2026 Ask Without Fear. All rights reserved.</p>
+
+    </footer>
+
+    <script src="../js/ask-question.js"></script>
+</body>
+</html>
